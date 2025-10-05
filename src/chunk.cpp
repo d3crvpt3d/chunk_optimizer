@@ -3,7 +3,7 @@
 
 int optimize_chunk(Chunk64_t &chunk){
 
-	Chunk64_t new_chunk = {{{0}}};
+	Chunk64_t new_chunk = {};
 
 	for(uint8_t z = 0; z < 64; z++){
 
@@ -32,6 +32,8 @@ int optimize_chunk(Chunk64_t &chunk){
 		}
 	
 	}
+
+	chunk = new_chunk;
 
 	return 0;
 }
